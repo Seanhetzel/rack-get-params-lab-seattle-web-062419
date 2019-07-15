@@ -1,4 +1,3 @@
-require 'pry'
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -27,7 +26,6 @@ class Application
       end
 
     elsif req.path.match(/add/)
-      binding.pry
       if @@items.include?(search_term)
         @@cart << search_term
         resp.write "added #{search_term}"
