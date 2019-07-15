@@ -21,6 +21,7 @@ class Application
         resp.write "Your cart is empty"
       else
         @@cart << search_term
+      end
 
     elsif req.path.match(/add/)
       if @@items.include?(search_term)
