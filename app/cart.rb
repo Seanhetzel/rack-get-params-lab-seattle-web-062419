@@ -9,6 +9,6 @@ class Cart
     if req.path.match(/cart/)
       @@cart.each do |product|
         resp.write "#{product}\n"
-         
+
 
 end
