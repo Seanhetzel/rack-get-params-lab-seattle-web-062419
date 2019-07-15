@@ -17,7 +17,10 @@ class Application
       resp.write handle_search(search_term)
 
     elsif req.path.match(/cart/)
-      @@cart.each
+      if @@cart.empty?
+        resp.write "Your cart is empty"
+      else
+        @@cart << search_term
 
     elsif req.path.match(/add/)
       if @@items.include?(search_term)
