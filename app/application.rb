@@ -29,7 +29,7 @@ class Application
       adding_item = req.params["item"]
       if @@items.include?(adding_item)
         @@cart.push(adding_item)
-        resp.write "added #{search_term}"
+        resp.write "added #{adding_item}"
       else
         resp.write "We don't have that item"
       end
