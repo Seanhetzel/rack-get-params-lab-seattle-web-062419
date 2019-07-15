@@ -23,5 +23,4 @@ class Cart
     resp.finish
   end
 
-
 end
