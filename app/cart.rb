@@ -16,7 +16,12 @@ class Cart
         @@cart << adding_product
       else
         resp.write "Coulnd't find #{adding_product}"
-
+      end
+    else
+      resp.write "Path Not Found"
+    end
+  resp.finish
+end
 
 
 end
